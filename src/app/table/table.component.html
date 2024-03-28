@@ -1,0 +1,42 @@
+<h2>TABLE</h2>
+<div class="button-container">
+  <button class="button" (click)="toggleTable()">Toggle Table</button>
+  <button class="button" (click)="changeColor1()">Chang color</button>
+</div>
+@if(showTable){
+<div class="table-container">
+  <div class="table wrapper">
+    <table class="table">
+      <thead [ngClass]="{ 'header-color': colorChanged }">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody [ngClass]="{ color: colorChanged }">
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+} @else {
+<div><h2>TABLE NOT FOUND</h2></div>
+}
